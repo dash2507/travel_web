@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { PLACES_API } from "../constants/urls";
 import { Container, Grid, Segment, List, Input } from "semantic-ui-react";
 import HeaderComponent from "./HeaderComponent";
-import { Auth } from "aws-amplify";
 import { useHistory } from "react-router-dom";
 
 const HomeScreen = props => {
