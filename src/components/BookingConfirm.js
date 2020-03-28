@@ -13,20 +13,21 @@ const BookingConfirm = ({ props }) => {
     if (booking_id !== undefined) {
       return (
         <Card padded>
-          <Card.Header>Booking Confirmed</Card.Header>
+          <Card.Header style={{ padding: 10 }}>Booking Confirmed</Card.Header>
           <Card.Content>
-            Congratulations! Your tickets are booked successfully!
+            Congratulations! <br />
+            Your tickets are booked successfully!
             <br />
             <span>Booking ID: {booking_id}</span>
             <br />
-            <Button
-              onClick={() => {
-                history.replace("/");
-              }}
-            >
-              Go To Home
-            </Button>
           </Card.Content>
+          <Button
+            onClick={() => {
+              history.replace("/");
+            }}
+          >
+            Go To Home
+          </Button>
         </Card>
       );
     } else {
@@ -36,7 +37,9 @@ const BookingConfirm = ({ props }) => {
   return (
     <Container>
       <HeaderComponet screenName="Booking Status" />
-      <Grid padded>{printStatus()}</Grid>
+      <Grid padded centered>
+        <Grid.Row>{printStatus()}</Grid.Row>
+      </Grid>
     </Container>
   );
 };

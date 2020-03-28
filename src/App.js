@@ -18,7 +18,7 @@ Amplify.configure({
 function App() {
   return (
     <BrowserRouter>
-      <Routes />;
+      <Routes />
     </BrowserRouter>
   );
 }
@@ -47,4 +47,3 @@ export default withAuthenticator(App, {
   signUpConfig,
   usernameAttributes
 });
-

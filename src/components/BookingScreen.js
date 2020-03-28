@@ -8,11 +8,12 @@ import {
   Container,
   Header,
   Grid,
-  Label,
+  Segment,
   Form,
   Input,
   Select,
-  Button
+  Button,
+  GridColumn
 } from "semantic-ui-react";
 
 const options = [
@@ -184,18 +185,21 @@ const BookingScreen = props => {
                   }}
                 />
               </Form.Group>
-              <Grid.Row>
-                <Label>Total : ${total}</Label>
-              </Grid.Row>
-              <Form.Group widths="equal">
-                <Button primary onClick={() => bookTicket()}>
+            </Form>
+            <Header as="h4">Total Amount: ${total}</Header>
+            <Grid>
+              
+              <Grid.Column width={8}>
+                <Button primary onClick={() => bookTicket()} fluid>
                   Submit
                 </Button>
-                <Button negative onClick={() => history.goBack()}>
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Button negative onClick={() => history.replace('/')} fluid>
                   Cancel
                 </Button>
-              </Form.Group>
-            </Form>
+              </Grid.Column>
+            </Grid>
           </Grid.Column>
         </Grid.Row>
       </Grid>
